@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
@@ -33,56 +34,55 @@ const Header = () => {
 
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
-      <div className="container header-container">
+      <div className="header-container">
         <Link to="/" className="logo" onClick={closeMobileMenu}>
-          <img src={logo} alt="Sustainable Farming" />
-          <span className="logo-text">EcoFarm Pro</span>
+          <img src={logo} alt="EcoFarm Pro - Sustainable Farming" />
         </Link>
 
-        <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
+        <button className="mobile-menu-btn" onClick={toggleMobileMenu} aria-label="Toggle menu">
           <FaBars />
         </button>
 
-        <nav className={`nav-menu ${mobileMenuOpen ? 'active' : ''}`}>
-          {mobileMenuOpen && (
-            <button className="mobile-close-btn" onClick={toggleMobileMenu}>
-              <FaTimes />
-            </button>
-          )}
-          
-          <ul className="nav-menu">
+        <nav>
+          <ul className={`nav-menu ${mobileMenuOpen ? 'active' : ''}`}>
+            {mobileMenuOpen && (
+              <button className="mobile-close-btn" onClick={toggleMobileMenu} aria-label="Close menu">
+                <FaTimes />
+              </button>
+            )}
+            
             <li className="nav-item">
-              <NavLink to="/" className="nav-link" onClick={closeMobileMenu}>
+              <NavLink to="/" className={({isActive}) => isActive ? "nav-link active" : "nav-link"} onClick={closeMobileMenu}>
                 Home
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/about" className="nav-link" onClick={closeMobileMenu}>
+              <NavLink to="/about" className={({isActive}) => isActive ? "nav-link active" : "nav-link"} onClick={closeMobileMenu}>
                 About
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/techniques" className="nav-link" onClick={closeMobileMenu}>
+              <NavLink to="/techniques" className={({isActive}) => isActive ? "nav-link active" : "nav-link"} onClick={closeMobileMenu}>
                 Techniques
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/market-insights" className="nav-link" onClick={closeMobileMenu}>
+              <NavLink to="/market-insights" className={({isActive}) => isActive ? "nav-link active" : "nav-link"} onClick={closeMobileMenu}>
                 Market Insights
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/profit-calculator" className="nav-link" onClick={closeMobileMenu}>
-                Profit Calculator
+              <NavLink to="/profit-calculator" className={({isActive}) => isActive ? "nav-link active" : "nav-link"} onClick={closeMobileMenu}>
+                Green Verse
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/resources" className="nav-link" onClick={closeMobileMenu}>
+              <NavLink to="/resources" className={({isActive}) => isActive ? "nav-link active" : "nav-link"} onClick={closeMobileMenu}>
                 Resources
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/contact-us" className="nav-link" onClick={closeMobileMenu}>
+              <NavLink to="/contact-us" className={({isActive}) => isActive ? "nav-link active" : "nav-link"} onClick={closeMobileMenu}>
                 Contact Us
               </NavLink>
             </li>

@@ -20,6 +20,7 @@ import NotFound from './pages/NotFound/NotFound';
 import Loader from './components/common/Loader/Loader';
 import ChatBot from './components/common/ChatBot/ChatBot';
 import CustomCursor from './components/common/CustomCursor/CustomCursor';
+import { AnimatePresence } from 'framer-motion';
 
 // Styles
 import './styles/global.css';

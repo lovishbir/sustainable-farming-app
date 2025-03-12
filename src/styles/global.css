@@ -192,3 +192,15 @@ body {
     padding: var(--spacing-xl) 0;
   }
 }
+/* Additional resets to ensure proper styling */
+ul, ol {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+  }

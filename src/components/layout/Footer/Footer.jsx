@@ -11,26 +11,25 @@ const Footer = () => {
         <div className="footer-container">
           <div className="footer-about">
             <Link to="/" className="footer-logo">
-              <img src={logoWhite} alt="Sustainable Farming" />
-              <span className="footer-logo-text">EcoFarm Pro</span>
+              <img src={logoWhite} alt="EcoFarm Pro - Sustainable Farming" />
             </Link>
             <p>
               We are dedicated to promoting sustainable farming practices that maximize profits while preserving the environment for future generations.
             </p>
             <div className="social-links">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <FaFacebookF />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                 <FaTwitter />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <FaInstagram />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <FaLinkedinIn />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                 <FaYoutube />
               </a>
             </div>

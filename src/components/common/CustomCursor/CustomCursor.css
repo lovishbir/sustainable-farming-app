@@ -1,125 +1,124 @@
-.header {
-    background-color: var(--background-light);
-    box-shadow: var(--shadow-sm);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    transition: background-color var(--transition-normal);
+/* src/components/common/CustomCursor/CustomCursor.css */
+
+/* Hide default cursor */
+body {
+    cursor: none !important;
   }
   
-  .header.scrolled {
-    background-color: white;
-    box-shadow: var(--shadow-md);
+  /* For touch devices, restore default cursor */
+  @media (hover: none) {
+    body {
+      cursor: auto !important;
+    }
+    .custom-cursor-main,
+    .custom-cursor-trail,
+    .custom-cursor-ring {
+      display: none !important;
+    }
   }
   
-  .header-container {
+  /* Main cursor */
+  .custom-cursor-main {
+    position: fixed;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-md) 0;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo img {
-    height: 40px;
-    margin-right: var(--spacing-sm);
-  }
-  
-  .logo-text {
-    font-family: var(--font-secondary);
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--primary-dark);
-  }
-  
-  .nav-menu {
-    display: flex;
-    list-style: none;
-  }
-  
-  .nav-item {
-    margin-left: var(--spacing-lg);
-  }
-  
-  .nav-link {
-    color: var(--text-primary);
+    justify-content: center;
+    pointer-events: none;
+    z-index: 9999;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
     font-weight: 500;
-    position: relative;
-    padding: var(--spacing-xs) 0;
+    white-space: nowrap;
+    will-change: width, height, transform, background-color;
   }
   
-  .nav-link:hover {
-    color: var(--primary-color);
+  /* Leaf SVG styling */
+  .cursor-leaf {
+    width: 16px;
+    height: 16px;
+    fill: #388E3C;
+    opacity: 0.8;
+    transform-origin: center;
+    animation: leafFloat 3s ease-in-out infinite alternate;
   }
   
-  .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--primary-color);
-    transition: width var(--transition-normal);
+  /* Trailing cursor */
+  .custom-cursor-trail {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%) rotate(30deg);
+    opacity: 0.4;
+    will-change: transform;
   }
   
-  .nav-link:hover::after,
-  .nav-link.active::after {
-    width: 100%;
+  .cursor-trail-leaf {
+    width: 12px;
+    height: 12px;
+    fill: #81C784;
+    opacity: 0.6;
+    transform-origin: center;
+    animation: trailRotate 4s linear infinite;
   }
   
-  .nav-link.active {
-    color: var(--primary-color);
+  /* Ring effect */
+  .custom-cursor-ring {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #4CAF50;
+    pointer-events: none;
+    z-index: 9997;
+    transform: translate(-50%, -50%);
+    will-change: transform, opacity, scale;
   }
   
-  .mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: var(--text-primary);
-    cursor: pointer;
+  /* Clicking animation */
+  .custom-cursor-main.clicking {
+    transform: translate(-50%, -50%) scale(0.8);
   }
   
-  @media (max-width: 768px) {
-    .mobile-menu-btn {
-      display: block;
+  /* Leaf floating animation */
+  @keyframes leafFloat {
+    0% {
+      transform: rotate(0deg) scale(1);
     }
+    50% {
+      transform: rotate(5deg) scale(1.05);
+    }
+    100% {
+      transform: rotate(-2deg) scale(0.95);
+    }
+  }
   
-    .nav-menu {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 70%;
-      height: 100vh;
-      background-color: white;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      transition: right var(--transition-normal);
-      box-shadow: var(--shadow-lg);
+  /* Trail rotation animation */
+  @keyframes trailRotate {
+    0% {
+      transform: rotate(0deg);
     }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
   
-    .nav-menu.active {
-      right: 0;
-    }
+  /* Hide cursor on specific elements that need precision */
+  input, textarea, select, [role="textbox"], [contenteditable="true"] {
+    cursor: text !important;
+  }
   
-    .nav-item {
-      margin: var(--spacing-md) 0;
-    }
-    
-    .mobile-close-btn {
-      position: absolute;
-      top: var(--spacing-lg);
-      right: var(--spacing-lg);
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      color: var(--text-primary);
-      cursor: pointer;
-    }
+  input[type="range"], input[type="color"], input[type="date"], input[type="time"] {
+    cursor: auto !important;
+  }
+  
+  /* Ensure cursor is visible on dark backgrounds */
+  .dark-section .custom-cursor-main {
+    background-color: rgba(129, 199, 132, 0.6) !important;
+  }
+  
+  .dark-section .cursor-leaf {
+    fill: #E8F5E9;
   }

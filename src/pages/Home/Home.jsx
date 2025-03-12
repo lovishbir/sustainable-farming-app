@@ -13,14 +13,32 @@ const Home = () => {
       <section className="hero-section">
         <div className="container">
           <div className="hero-content">
-            <h1 className="hero-title">Sustainable Farming for Maximum Profit</h1>
+            <h1 className="hero-title">Bhoomi Sahayata</h1>
             <p className="hero-subtitle">
               Discover eco-friendly farming techniques that increase yield, reduce costs, and maximize your profits while preserving the environment for future generations.
             </p>
-            <div className="hero-buttons">
+            {/* <div className="hero-buttons">
               <Link to="/techniques" className="btn">Explore Techniques</Link>
-              <Link to="/profit-calculator" className="btn btn-secondary">Calculate Profit</Link>
-            </div>
+              <Link to="/profit-calculator" className="btn btn-secondary">Green Verse</Link>
+            </div> */}
+            <div className="hero-buttons">
+                <Link 
+                    to="/techniques" 
+                    className="btn"
+                    data-cursor-variant="button"
+                    data-cursor-text="Explore"
+                >
+                    Explore Techniques
+                </Link>
+                <Link 
+                    to="/profit-calculator" 
+                    className="btn btn-secondary"
+                    data-cursor-variant="button"
+                    data-cursor-text="Calculate"
+                >
+                    Green Verse
+                </Link>
+                </div>
           </div>
         </div>
       </section>
@@ -31,7 +49,9 @@ const Home = () => {
             <h2>How We Help Farmers</h2>
           </div>
           <div className="features-grid">
-            <div className="feature-card">
+            <div className="feature-card"
+  data-cursor-variant="hover"
+  data-cursor-text="Learn More">
               <div className="feature-content">
                 <div className="feature-icon">
                   <FaLeaf />
@@ -43,7 +63,9 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="feature-card">
+            <div className="feature-card"
+  data-cursor-variant="hover"
+  data-cursor-text="Learn More">
               <div className="feature-content">
                 <div className="feature-icon">
                   <FaChartLine />
@@ -60,7 +82,7 @@ const Home = () => {
                 <div className="feature-icon">
                   <FaCalculator />
                 </div>
-                <h3 className="feature-title">Profit Calculators</h3>
+                <h3 className="feature-title">Green Verse</h3>
                 <p className="feature-description">
                   Use our specialized tools to calculate potential profits, analyze costs, and optimize your farming business.
                 </p>
@@ -74,10 +96,10 @@ const Home = () => {
         <div className="container">
           <div className="about-container">
             <div className="about-image">
-              <img src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sustainable Farming" />
+              <img src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Bhoomi Sahayata" />
             </div>
             <div className="about-content">
-              <h2>Why Choose Sustainable Farming?</h2>
+              <h2>Why Choose Bhoomi Sahayata?</h2>
               <p>
                 Sustainable farming practices not only benefit the environment but also lead to increased profitability for farmers. By reducing input costs, improving soil health, and producing higher quality crops, sustainable farming creates a win-win situation.
               </p>
@@ -130,7 +152,7 @@ const Home = () => {
 
             <div className="testimonial">
               <p className="testimonial-content">
-                "The profit calculator tool helped me identify which crops would be most profitable for my region and soil type. I've seen a 40% increase in my farm's profitability since implementing these changes."
+                "The Green Verse tool helped me identify which crops would be most profitable for my region and soil type. I've seen a 40% increase in my farm's profitability since implementing these changes."
               </p>
               <div className="testimonial-author">
                 <div className="author-image">
