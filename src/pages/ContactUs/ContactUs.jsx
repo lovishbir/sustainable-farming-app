@@ -109,8 +109,8 @@ const ContactUs = () => {
                   </div>
                   <div className="contact-details">
                     <h3>Our Location</h3>
-                    <p>123 Eco Farm Road, Green Valley</p>
-                    <p>California, CA 94123</p>
+                    <p>Chandigarh University</p>
+                    <p>Mohali</p>
                   </div>
                 </div>
                 
@@ -120,8 +120,8 @@ const ContactUs = () => {
                   </div>
                   <div className="contact-details">
                     <h3>Phone Number</h3>
-                    <a href="tel:+15551234567">+1 (555) 123-4567</a>
-                    <a href="tel:+15559876543">+1 (555) 987-6543</a>
+                    <a href="tel:+15551234567">+91 8427444442</a>
+                    <a href="tel:+15559876543">+91 7009707377</a>
                   </div>
                 </div>
                 
@@ -131,8 +131,8 @@ const ContactUs = () => {
                   </div>
                   <div className="contact-details">
                     <h3>Email Address</h3>
-                    <a href="mailto:info@ecofarmpro.com">info@ecofarmpro.com</a>
-                    <a href="mailto:support@ecofarmpro.com">support@ecofarmpro.com</a>
+                    <a href="mailto:info@Bhoomi Sahayata.com">info@BhoomiSahayata.com</a>
+                    <a href="mailto:support@Bhoomi Sahayata.com">support@BhoomiSahayata.com</a>
                   </div>
                 </div>
                 
@@ -290,11 +290,7 @@ const ContactUs = () => {
         </div>
       </section>
 
-      <div className="map-section">
-        <div className="map-placeholder">
-          <p>Interactive Map - Our Location (123 Eco Farm Road, Green Valley, CA 94123)</p>
-        </div>
-      </div>
+      
     </div>
   );
 };

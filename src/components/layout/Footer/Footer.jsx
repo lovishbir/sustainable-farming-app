@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import './Footer.css';
-import logoWhite from '../../../assets/logo-white.svg';
+import logoWhite from '../../../assets/logo.svg';
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="footer-container">
           <div className="footer-about">
             <Link to="/" className="footer-logo">
-              <img src={logoWhite} alt="EcoFarm Pro - Sustainable Farming" />
+              <img src={logoWhite} alt="Bhoomi Sahayata  - Sustainable Farming" />
             </Link>
             <p>
               We are dedicated to promoting sustainable farming practices that maximize profits while preserving the environment for future generations.
@@ -64,22 +64,22 @@ const Footer = () => {
             <ul className="contact-info">
               <li>
                 <span className="icon"><FaMapMarkerAlt /></span>
-                <span>123 Eco Farm Road, Green Valley, CA 94123</span>
+                <span>Chandigarh University</span>
               </li>
               <li>
                 <span className="icon"><FaPhone /></span>
-                <span>+1 (555) 123-4567</span>
+                <span> +91 8427444442 </span>
               </li>
               <li>
                 <span className="icon"><FaEnvelope /></span>
-                <span>info@ecofarmpro.com</span>
+                <span>info@BhoomiSahayata.com</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} EcoFarm Pro. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Bhoomi Sahayata . All Rights Reserved.</p>
         </div>
       </div>
     </footer>

@@ -1,3 +1,5 @@
+/* Footer.css - Enhanced with improved visibility and mobile optimizations */
+
 .footer {
   background-color: var(--background-dark);
   color: var(--text-light);
@@ -10,6 +12,7 @@
   gap: var(--spacing-xl);
 }
 
+/* Logo styling */
 .footer-logo {
   display: flex;
   align-items: center;
@@ -33,14 +36,17 @@
   margin-bottom: var(--spacing-md);
   font-size: 0.9rem;
   line-height: 1.6;
+  color: var(--text-light); /* Ensure text is visible */
 }
 
+/* Heading styling - Fixed visibility issue */
 .footer-heading {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: var(--spacing-lg);
   position: relative;
   padding-bottom: var(--spacing-xs);
+  color: white; /* Explicitly set to white for visibility */
 }
 
 .footer-heading::after {
@@ -53,6 +59,7 @@
   background-color: var(--primary-color);
 }
 
+/* Links styling */
 .footer-links {
   list-style: none;
   padding: 0;
@@ -68,13 +75,21 @@
   transition: color var(--transition-fast), transform var(--transition-fast);
   display: inline-block;
   text-decoration: none;
+  /* Touch optimization */
+  padding: var(--spacing-xs) 0;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
 }
 
-.footer-links a:hover {
+.footer-links a:hover,
+.footer-links a:focus {
   color: var(--primary-light);
   transform: translateX(5px);
+  outline: none;
 }
 
+/* Contact info styling */
 .contact-info {
   list-style: none;
   padding: 0;
@@ -85,6 +100,7 @@
   display: flex;
   align-items: flex-start;
   margin-bottom: var(--spacing-sm);
+  color: var(--text-light); /* Ensure text is visible */
 }
 
 .contact-info .icon {
@@ -92,47 +108,138 @@
   color: var(--primary-light);
   font-size: 1.2rem;
   margin-top: 3px;
+  flex-shrink: 0;
 }
 
+/* Social links */
 .social-links {
   display: flex;
   margin-top: var(--spacing-md);
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
 }
 
 .social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 40px; /* Increased for better touch target */
+  height: 40px; /* Increased for better touch target */
   border-radius: var(--border-radius-round);
   background-color: rgba(255, 255, 255, 0.1);
   color: white;
-  margin-right: var(--spacing-sm);
-  transition: background-color var(--transition-fast);
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
 }
 
-.social-links a:hover {
+.social-links a:hover,
+.social-links a:focus {
   background-color: var(--primary-color);
+  transform: translateY(-3px);
+  outline: none;
 }
 
+.social-links a:active {
+  transform: scale(0.95);
+}
+
+/* Footer bottom section */
 .footer-bottom {
   text-align: center;
   padding-top: var(--spacing-lg);
   margin-top: var(--spacing-xl);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.9rem;
+  color: var(--text-light); /* Ensure text is visible */
 }
 
+/* Tablet responsiveness */
 @media (max-width: 992px) {
   .footer-container {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-lg);
   }
+  
+  /* Optimize layout for tablet */
+  .footer-about {
+    grid-column: span 2;
+    margin-bottom: var(--spacing-lg);
+  }
 }
 
+/* Mobile responsiveness */
 @media (max-width: 576px) {
+  .footer {
+    padding: var(--spacing-lg) 0 var(--spacing-md);
+  }
+  
   .footer-container {
     grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  /* Improve mobile layout */
+  .footer-about {
+    grid-column: 1;
+  }
+  
+  /* Center align footer logo on mobile */
+  .footer-logo {
+    justify-content: center;
+  }
+  
+  /* Adjust footer headings for mobile */
+  .footer-heading {
+    text-align: center;
+  }
+  
+  .footer-heading::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+  }
+  
+  /* Center footer links for better mobile UX */
+  .footer-links {
+    text-align: center;
+  }
+  
+  .footer-links a {
+    justify-content: center;
+  }
+  
+  /* Improve contact info layout */
+  .contact-info li {
+    justify-content: center;
+  }
+  
+  /* Center social links */
+  .social-links {
+    justify-content: center;
+  }
+  
+  /* Enhance touch targets for all interactive elements */
+  .footer-links a,
+  .social-links a {
+    padding: var(--spacing-sm) 0;
+  }
+}
+
+/* Accessibility enhancements */
+@media (prefers-reduced-motion: reduce) {
+  .footer-links a:hover,
+  .social-links a:hover {
+    transform: none;
+    transition: none;
+  }
+}
+
+/* High contrast mode support */
+@media (forced-colors: active) {
+  .footer-heading::after {
+    background-color: CanvasText;
+  }
+  
+  .social-links a {
+    border: 1px solid CanvasText;
   }
 }

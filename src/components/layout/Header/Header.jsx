@@ -36,7 +36,7 @@ const Header = () => {
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
         <Link to="/" className="logo" onClick={closeMobileMenu}>
-          <img src={logo} alt="EcoFarm Pro - Sustainable Farming" />
+          <img src={logo} alt="Bhoomi Sahayata - Sustainable Farming" />
         </Link>
 
         <button className="mobile-menu-btn" onClick={toggleMobileMenu} aria-label="Toggle menu">

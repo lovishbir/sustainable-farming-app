@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
 import { FaLeaf, FaHandsHelping, FaLightbulb, FaBalanceScale, FaGlobeAmericas, FaUsers } from 'react-icons/fa';
 import './About.css';
+import Kartik_Chahal from '../../assets/images/Kartik_Chahal.jpeg';
+import Yash_Sharma from '../../assets/images/Yash_Sharma.jpeg';
+import Yashika_Hudda from '../../assets/images/Yashika_Hudda.jpeg';
+import Lovish_Bir from '../../assets/images/Lovish_Bir.jpeg';
 
 const About = () => {
   useEffect(() => {
@@ -11,7 +15,7 @@ const About = () => {
     <div className="about-page">
       <section className="about-hero">
         <div className="container">
-          <h1>About EcoFarm Pro</h1>
+          <h1>About Bhoomi Sahayata </h1>
           <p className="about-hero-description">
             We are dedicated to revolutionizing the farming industry by promoting sustainable practices that maximize profits while preserving our planet for future generations.
           </p>
@@ -24,7 +28,7 @@ const About = () => {
             <div className="mission-content">
               <h2>Our Mission</h2>
               <p>
-                At EcoFarm Pro, our mission is to empower farmers with the knowledge, tools, and resources they need to adopt sustainable farming practices that are both environmentally responsible and economically profitable.
+                At Bhoomi Sahayata , our mission is to empower farmers with the knowledge, tools, and resources they need to adopt sustainable farming practices that are both environmentally responsible and economically profitable.
               </p>
               <p>
                 We believe that sustainable farming is not just about environmental conservation—it's also about creating resilient agricultural systems that can withstand changing climate conditions, market fluctuations, and evolving consumer preferences.
@@ -117,78 +121,40 @@ const About = () => {
           <div className="team-grid">
             <div className="team-member">
               <div className="team-member-image">
-                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Dr. Michael Chen" />
+                <img src={Lovish_Bir} alt="Dr. Michael Chen" />
               </div>
-              <h3 className="team-member-name">Dr. Michael Chen</h3>
-              <p className="team-member-role">Founder & CEO</p>
-              <p className="team-member-bio">
-                With over 20 years of experience in sustainable agriculture, Michael founded EcoFarm Pro to bridge the gap between ecological farming and economic success.
-              </p>
+              <h3 className="team-member-name">Lovish Bir</h3>
+             
             </div>
 
             <div className="team-member">
               <div className="team-member-image">
-                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Dr. Sarah Johnson" />
+                <img src={Yashika_Hudda} alt="Yashika Hudda" />
               </div>
-              <h3 className="team-member-name">Dr. Sarah Johnson</h3>
-              <p className="team-member-role">Chief Agricultural Scientist</p>
-              <p className="team-member-bio">
-                Sarah leads our research initiatives, focusing on developing innovative sustainable farming techniques that maximize yield and profit.
-              </p>
+              <h3 className="team-member-name">Yashika Hudda</h3>
+             
             </div>
 
             <div className="team-member">
               <div className="team-member-image">
-                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Robert Martinez" />
+                <img src={Kartik_Chahal} alt="Kartik Chahal" />
               </div>
-              <h3 className="team-member-name">Robert Martinez</h3>
-              <p className="team-member-role">Agricultural Economist</p>
-              <p className="team-member-bio">
-                Robert analyzes market trends and develops economic models to help farmers make informed decisions about crop selection and pricing.
-              </p>
+              <h3 className="team-member-name">Kartik Chahal</h3>
+              
             </div>
 
             <div className="team-member">
               <div className="team-member-image">
-                <img src="https://randomuser.me/api/portraits/women/42.jpg" alt="Emily Wilson" />
+                <img src={Yash_Sharma} alt="Yash Sharma" />
               </div>
-              <h3 className="team-member-name">Emily Wilson</h3>
-              <p className="team-member-role">Community Outreach Director</p>
-              <p className="team-member-bio">
-                Emily works directly with farming communities to understand their needs and implement sustainable solutions tailored to local contexts.
-              </p>
+              <h3 className="team-member-name">Yash Sharma</h3>
+             
             </div>
           </div>
         </div>
       </section>
 
-      <section className="partners-section">
-        <div className="container">
-          <div className="section-title">
-            <h2>Our Partners</h2>
-          </div>
-          <p>
-            We collaborate with leading organizations, research institutions, and government agencies to advance sustainable farming practices globally.
-          </p>
-          <div className="partners-grid">
-            <div className="partner-logo">
-              <img src="https://via.placeholder.com/200x80?text=Partner+1" alt="Partner 1" />
-            </div>
-            <div className="partner-logo">
-              <img src="https://via.placeholder.com/200x80?text=Partner+2" alt="Partner 2" />
-            </div>
-            <div className="partner-logo">
-              <img src="https://via.placeholder.com/200x80?text=Partner+3" alt="Partner 3" />
-            </div>
-            <div className="partner-logo">
-              <img src="https://via.placeholder.com/200x80?text=Partner+4" alt="Partner 4" />
-            </div>
-            <div className="partner-logo">
-              <img src="https://via.placeholder.com/200x80?text=Partner+5" alt="Partner 5" />
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </div>
   );
 };
